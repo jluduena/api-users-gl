@@ -13,9 +13,23 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	runtimeOnly 'com.h2database:h2'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+	implementation 'junit:junit:4.13.1'
+
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.0-groovy-3.0'
+	testImplementation group: 'org.spockframework', name: 'spock-spring', version: '2.0-groovy-3.0'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	runtimeOnly 'com.h2database:h2'
+
+
 }
 
 test {
